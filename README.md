@@ -68,4 +68,4 @@ curl -X POST -H "Content-Type: application/json" -d '{"clientId":1,"category":"F
 ## Author
 Adrian Księżak (@adixks) - https://github.com/adixks
 
-Thank you for your interest in our application! We are ready to deliver unforgettable reading experiences on a scale of millions of books and clients. We look forward to your feedback and any questions during the interview! 📖✨
+Thank you for your interest in my application! I am ready to deliver unforgettable reading experiences on a scale of millions of books and clients. We look forward to your feedback and any questions! 📖✨
