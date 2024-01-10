@@ -1,6 +1,6 @@
 # Bookworm Library 📚✨
 
-Welcome to the Bookworm Library application! Our platform has been designed to handle a massive number of clients and an extensive collection of books. We aim not only to provide efficient organization but also to deliver a unique experience for our readers through subscribing to favorite authors and categories.
+Welcome to the Bookworm Library application! My platform has been designed to handle a massive number of clients and an extensive collection of books. We aim not only to provide efficient organization but also to deliver a unique experience for our readers through subscribing to favorite authors and categories.
 
 ## Table of Contents
 - Introduction
