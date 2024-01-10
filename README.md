@@ -35,7 +35,7 @@ mvn clean install
 
 3. Start the application.
 ```bash
-java -jar target/bookworm-library.jar
+java -jar target/library-api.jar
 ```
 
 ## Usage
