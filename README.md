@@ -52,17 +52,17 @@ mvn test
 # Examples
 ## Client Registration
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@email.com"}' http://localhost:8080/api/register
+curl -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@email.com"}' http://localhost:8080/api/v1/clients
 ```
 
 ## Adding a New Book
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"author":"J.K. Rowling","title":"Harry Potter and the Sorcerer\'s Stone","category":"Fantasy"}' http://localhost:8080/api/addBook
+curl -X POST -H "Content-Type: application/json" -d '{"author":"J.K. Rowling","title":"Harry Potter and the Sorcerer\'s Stone","category":"Fantasy"}' http://localhost:8080/api/v1/books
 ```
 
 ## Category Subscription
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"clientId":1,"category":"Fantasy"}' http://localhost:8080/api/subscribe
+curl -X POST -H "Content-Type: application/json" -d '{"clientId":1,"category":"Fantasy"}' http://localhost:8080/api/v1/subscriptions
 ```
 
 ## Author
