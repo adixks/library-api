@@ -24,7 +24,7 @@ To install and run the application, follow these steps:
 
 1. Clone the repository to your local machine.
 ```bash
-git clone [https://github.com/your_repository](https://github.com/adixks/library-api.git)
+git clone https://github.com/adixks/library-api.git
 cd library-api
 ```
 
