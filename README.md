@@ -24,8 +24,8 @@ To install and run the application, follow these steps:
 
 1. Clone the repository to your local machine.
 ```bash
-git clone https://github.com/your_repository
-cd BookwormLibrary
+git clone [https://github.com/your_repository](https://github.com/adixks/library-api.git)
+cd library-api
 ```
 
 2. Run the application using a dependency management tool such as Maven.
