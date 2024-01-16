@@ -57,6 +57,7 @@ public class SubscriptionServiceTest {
         subscriptionDto.setClientId(1L);
 
         when(clientRepository.findById(1L)).thenReturn(Optional.of(clientEntity));
+        when(subscriptionMapper.toEntity(any(SubscriptionCreateDto.class), any(ClientEntity.class))).thenReturn(subscriptionEntity);
         when(subscriptionRepository.save(any(SubscriptionEntity.class))).thenReturn(subscriptionEntity);
         when(subscriptionMapper.toDto(any(SubscriptionEntity.class))).thenReturn(subscriptionDto);
 

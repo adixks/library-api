@@ -13,6 +13,7 @@ import pl.szlify.libraryapi.repository.BookRepository;
 import pl.szlify.libraryapi.repository.SubscriptionRepository;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.time.Clock;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Stream;
@@ -24,12 +25,13 @@ public class BookService {
     private final SubscriptionRepository subscriptionRepository;
     private final EmailService emailService;
     private final BookMapper bookMapper;
+    private final Clock clock;
 
     @Value("${cron.expression}")
     private String cronExpression;
 
     public BookDto addBook(BookCreateDto bookCreateDto) {
-        LocalTime now = LocalTime.now();
+        LocalTime now = LocalTime.now(clock);
         LocalTime deadline = LocalTime.of(20, 0);
 
         if (now.isAfter(deadline)) {
