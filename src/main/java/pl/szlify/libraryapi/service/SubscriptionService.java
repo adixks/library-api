@@ -26,18 +26,12 @@ public class SubscriptionService {
         if (!clientEntity.isEnabled()) {
             throw new ClientNotEnabledException();
         }
-        SubscriptionEntity subscriptionEntity = new SubscriptionEntity()
-                .setClientEntity(clientEntity)
-                .setCategory(subscriptionCreateDto.getCategory())
-                .setAuthor(subscriptionCreateDto.getAuthor());
-        SubscriptionDto subscriptionDto = subscriptionMapper.toDto(subscriptionRepository.save(subscriptionEntity));
-        subscriptionDto.setClientId(subscriptionEntity.getClientEntity().getId());
-        return subscriptionDto;
+        SubscriptionEntity subscriptionEntity = subscriptionMapper.toEntity(subscriptionCreateDto, clientEntity);
+        return subscriptionMapper.toDto(subscriptionRepository.save(subscriptionEntity));
     }
 
     public void deleteSubscription(Long id) {
-        boolean existsSubscription = subscriptionRepository.existsById(id);
-        if (!existsSubscription) {
+        if (!subscriptionRepository.existsById(id)) {
             throw new LackOfSubscriptionException();
         }
         subscriptionRepository.deleteById(id);
