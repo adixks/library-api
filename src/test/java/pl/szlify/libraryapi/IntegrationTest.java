@@ -119,7 +119,7 @@ public class IntegrationTest {
     public void confirmRegistration_ReturnsConfirmationMessage() throws Exception {
         String token = "sampleToken";
 
-        mockMvc.perform(get("/api/v1/registrationConfirm").param("token", token))
+        mockMvc.perform(get("/api/v1/client/registrationConfirm").param("token", token))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Registration confirmed"));
     }
@@ -128,7 +128,7 @@ public class IntegrationTest {
     public void confirmRegistration_ReturnsInvalidTokenMessage() throws Exception {
         String invalidToken = "invalidToken";
 
-        mockMvc.perform(get("/api/v1/registrationConfirm").param("token", invalidToken))
+        mockMvc.perform(get("/api/v1/client/registrationConfirm").param("token", invalidToken))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Invalid token"));
     }

@@ -2,6 +2,7 @@ package pl.szlify.libraryapi.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import pl.szlify.libraryapi.exceptions.InvalidTokenException;
 import pl.szlify.libraryapi.mapper.ClientMapper;
 import pl.szlify.libraryapi.model.ClientEntity;
 import pl.szlify.libraryapi.model.VerificationToken;
@@ -35,5 +36,16 @@ public class ClientService {
         String subject = "Registration confirmation";
         String content = emailService.buildConfirmationEmailContent(clientEntity, token);
         emailService.sendEmail(to, subject, content);
+    }
+
+    public void confirmRegistration(String token) {
+        VerificationToken verificationToken = tokenRepository.findByToken(token);
+        if (verificationToken == null) {
+            throw new InvalidTokenException();
+        }
+
+        ClientEntity client = verificationToken.getClient();
+        client.setEnabled(true);
+        clientRepository.save(client);
     }
 }
