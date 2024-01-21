@@ -2,6 +2,9 @@
 
 Welcome to the Bookworm Library application! My platform has been designed to handle a massive number of clients and an extensive collection of books. My aim not only to provide efficient organization but also to deliver a unique experience for our readers through subscribing to favorite authors and categories.
 
+## Tools and Components 🔧
+[Java 17, Spring Boot 3, Spring Web MVC, Spring for Mail, Spring Validation, MySQL, JUnit 5, Mockito 5, Faker, Integration Tests, Lombock]
+
 ## Table of Contents
 - Introduction
 - Features
