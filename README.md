@@ -41,9 +41,6 @@ mvn clean install
 java -jar target/library-api.jar
 ```
 
-## Usage
-To use the API, refer to the documentation available at: API Documentation.
-
 ## Tests
 The project includes unit tests using JUnit 5, Mockito 5, and Faker for services and mappers. Additionally, an integration test is available.
 
